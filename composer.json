@@ -1,5 +1,5 @@
 {
-    "name":"UsefulWeb/phpHypher",
+    "name":"useful-web/php-hypher ",
     "type":"library",
     "description":"hyphenation using Liang-Knuth algorithm",
     "keywords":["phpHypher", "hyphenation", "hyphenate"],
