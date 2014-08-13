@@ -15,6 +15,8 @@
 
 require_once 'sk_lib_i.php';
 
+namespace phpHypher;
+
 class phpHypher {
 
 	const VERSION = '0.1.2';
