@@ -1,4 +1,7 @@
-<?php  /* hypher.php -- hyphenation using Liang-Knuth algorithm.
+<?php  
+namespace phpHypher;
+
+   /* hypher.php -- hyphenation using Liang-Knuth algorithm.
 	* version 0.1.2 (01.09.2010)
 	* Copyright (C) 2008-2010 Sergey Kurakin (sergeykurakin@gmail.com)
 	*
@@ -14,8 +17,6 @@
 	*/
 
 require_once 'sk_lib_i.php';
-
-namespace phpHypher;
 
 class phpHypher {
 
