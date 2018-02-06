@@ -128,10 +128,11 @@ function sk_parse_config_str($str, $is_unicode = false) {
 	$tmppat = '/(?<!\x5C)\'(.*[^\x5C])\'/Us';
 	if ($is_unicode) {
 		$tmppat = sk_pattern2unicode($tmppat);
-		$str = preg_replace_callback($tmppat,
-			create_function('$in', 'return sl_screenspecial($in[1], true);'), $str);
-	} else $str = preg_replace_callback($tmppat,
-			create_function('$in', 'return sl_screenspecial($in[1], false);'), $str);
+	}
+
+	$str = preg_replace_callback($tmppat, function ($in) use ($is_unicode) {
+		return sl_screenspecial($in[1], $is_unicode);
+	}, $str);
 
 	$str = sk_clean_config($str, $is_unicode);
 
